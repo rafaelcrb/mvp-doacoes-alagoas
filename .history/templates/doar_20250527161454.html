@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Quero ajudar!</h2>
+
+<div class="card shadow p-4">
+  <form method="POST">
+    <div class="form-group">
+      <label><i class="fas fa-user"></i> Seu nome:</label>
+      <input class="form-control" type="text" name="nome" required>
+    </div>
+    <div class="form-group">
+      <label><i class="fas fa-envelope"></i> Contato:</label>
+      <input class="form-control" type="text" name="contato" required>
+    </div>
+    <div class="form-group">
+      <label><i class="fas fa-gift"></i> Item para doar:</label>
+      <input class="form-control" type="text" name="item" required>
+    </div>
+    <button class="btn btn-success mt-2" type="submit">
+      <i class="fas fa-hands-helping"></i> Enviar doação
+    </button>
+  </form>
+  <p>
+  <strong>Chave Pix:</strong> 
+  <span class="badge badge-primary">{{ i[4] }}</span>
+  <button class="btn btn-sm btn-secondary" onclick="copyPix('{{ i[4] }}')">
+    <i class="fas fa-copy"></i> Copiar Pix
+  </button>
+</p>
+
+</div>
+{% endblock %}

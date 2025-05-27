@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>MVP Doações Alagoas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Doações Alagoas</a>
+  <ul class="navbar-nav">
+    <li class="nav-item"><a class="nav-link" href="/instituicoes">Instituições</a></li>
+    <li class="nav-item"><a class="nav-link" href="/doar">Doar</a></li>
+    <li class="nav-item"><a class="nav-link" href="/campanhas">Campanhas</a></li>
+    <li class="nav-item"><a class="nav-link" href="/sobre">Sobre</a></li>
+    <li class="nav-item"><a class="nav-link" href="/doadores">Doadores</a></li>
+  </ul>
+</nav>
+
+<div class="container mt-4">
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <div class="alert alert-success">
+        {{ messages[0] }}
+      </div>
+    {% endif %}
+  {% endwith %}
+  
+  {% block content %}{% endblock %}
+</div>
+
+<div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="3000">
+  <div class="toast-body">
+    Ação realizada com sucesso!
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+    $('.toast').toast('show');
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Campanhas em andamento</h2>
+
+<div class="row">
+  {% for c in campanhas %}
+  <div class="col-md-4">
+    <div class="card mb-3 shadow">
+      <div class="card-body">
+        <h5 class="card-title">
+          <i class="fas fa-bullhorn"></i> {{ c.nome }}
+        </h5>
+        <p class="card-text">{{ c.descricao }}</p>
+        <a href="/doar" class="btn btn-outline-primary">Participar</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

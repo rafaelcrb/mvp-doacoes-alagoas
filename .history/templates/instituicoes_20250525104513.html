@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Instituições afetadas</h2>
+<ul>
+  {% for i in instituicoes %}
+  <li>{{ i[1] }} - {{ i[2] }} | Necessidade: {{ i[3] }}</li>
+  {% endfor %}
+</ul>
+
+<h3>Cadastrar nova instituição</h3>
+<form method="POST">
+  Nome: <input type="text" name="nome"><br>
+  Cidade: <input type="text" name="cidade"><br>
+  Necessidade: <input type="text" name="necessidade"><br>
+  <input type="submit" value="Cadastrar">
+</form>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron">
+  <h1 class="display-4"><i class="fas fa-hand-holding-heart"></i> Bem-vindo ao Sistema de Doações</h1>
+  <p class="lead">
+    Ajude as vítimas das enchentes realizando doações às instituições cadastradas.
+  </p>
+  <hr class="my-4">
+  <p>
+    Encontre campanhas, faça sua doação e veja como sua contribuição pode ajudar quem precisa.
+  </p>
+  <a class="btn btn-primary btn-lg" href="/instituicoes" role="button">
+    Ver Instituições
+  </a>
+  <a class="btn btn-success btn-lg" href="/doar" role="button">
+    Fazer Doação
+  </a>
+</div>
+{% endblock %}

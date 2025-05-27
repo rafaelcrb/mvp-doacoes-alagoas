@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Campanhas em andamento</h2>
+<ul>
+  {% for c in campanhas %}
+  <li><strong>{{ c.nome }}</strong>: {{ c.descricao }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}

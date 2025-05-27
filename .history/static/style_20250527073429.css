@@ -1,0 +1,40 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    background-color: #007bff !important;
+}
+
+.navbar a {
+    color: white !important;
+    font-weight: bold;
+}
+
+.card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.badge-warning {
+    background-color: #ffc107;
+}
+
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}

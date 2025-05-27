@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Lista de Doadores</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Contato</th>
+      <th>Item</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for d in doadores %}
+    <tr>
+      <td>{{ d[1] }}</td>
+      <td>{{ d[2] }}</td>
+      <td>{{ d[3] }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
